@@ -1,38 +1,49 @@
-*{
-    background-color: rgb(66, 26, 87);
+/* Page background */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(66, 26, 87);
+  color: white;
 }
 
-.head{
-    display: flex;
-    gap: 20px;
-}
+/* Main container */
 .head {
   text-align: center;
   padding: 20px;
 }
 
+/* Navigation bar */
+.nav {
+  margin-bottom: 30px;
+}
+
 .nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   font-weight: bold;
+  color: white;
 }
 
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contact card */
 .contact-card {
-  margin-top: 80px;
+  margin: 40px auto;
   padding: 20px;
-  display: inline-block;
+  width: 300px;
   border: 2px solid white;
-  border-radius: 10px;
-  align-items: center;
-  position: absolute;
-  top: 150px;
-  margin-left: 600px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Profile image */
 .profile-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  object-fit:cover;
+  object-fit: cover;
   margin-bottom: 15px;
+  border: 2px solid white;
 }

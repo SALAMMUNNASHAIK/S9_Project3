@@ -1,21 +1,21 @@
-import { Link } from "react-router-dom"
-import "../components/styles.css"
-function Home(){
+import { Link, useLocation } from "react-router-dom";
+import "../components/styles.css";
 
+function Home() {
+  const location = useLocation();
 
-    return(
-       
-      <div className="head">
-        <Link to="/">Main</Link> 
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-         <Link to="/contact">contact</Link>
-        <br></br>
-        <h1>This is the Home page u know!!!!</h1>
-        </div>        
+  return (
+    <div className="head">
+      <button><Link to="/" state={{ course: "CSE" }}>Main</Link></button>
+        <button><Link to="/home"state={{ course: "CSE" }}>Home</Link></button>
+        <button><Link to="/about"state={{ course: "CSE" }}>About</Link></button>
+        <button><Link to="/contact" state={{ course: "CSE" }}>Contact</Link></button>
+      <br />
 
-    )
-    
+      <h1>This is the Home page u know!!!!</h1>
+      <p>I belong to --- {location.state?.course}</p>
+    </div>
+  );
 }
 
-export default Home
+export default Home;

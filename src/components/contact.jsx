@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../components/styles.css";
 
 function Contact() {
+  const location = useLocation();
+
   return (
     <div className="head">
       <nav className="nav">
-        <Link to="/">Main</Link>
-        <Link to="/home">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <button><Link to="/" state={{ course: "CSE" }}>Main</Link></button>
+        <button><Link to="/home"state={{ course: "CSE" }}>Home</Link></button>
+        <button><Link to="/about"state={{ course: "CSE" }}>About</Link></button>
+        <button><Link to="/contact" state={{ course: "CSE" }}>Contact</Link></button>
       </nav>
 
       <h1>Welcome to Contact Page!</h1>
@@ -26,6 +28,8 @@ function Contact() {
         <p><b>Branch:</b> CSE</p>
         <p><b>Address:</b> Tenali</p>
       </div>
+
+      <p>I belong to --- {location.state?.course}</p>
     </div>
   );
 }
